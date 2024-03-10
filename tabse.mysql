@@ -1,0 +1,14 @@
+sudo docker start 5d05c133b8bf
+sudo docker exec -it mysql-container mysql -uroot -p 
+
+
+
+CREATE TABLE chat_group (
+    groupname VARCHAR(128),
+    groupowner VARCHAR(128),
+    groupmember VARCHAR(4096)
+) CHARSET=utf8;
+
+// 插入
+insert into chat_group values("learning", "jh", "jh|pioneer|wang|pig");
+insert into chat_group values("playing", "tom", "tom|jh|wang|ddd");
